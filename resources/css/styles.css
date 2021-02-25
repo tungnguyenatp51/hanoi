@@ -1,0 +1,202 @@
+
+
+/* --------------------------------------------*/
+/* ---------------defaut setup-----------------*/
+/* --------------------------------------------*/
+*{
+    padding: 0px;
+    margin: 0px; 
+    box-sizing: border-box;   
+}
+html{
+    font-family: 'lato', sans-serif;
+    font-size: 20px;
+    /* mặc định font size là 16px */
+    color: #5a5a5a;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+    /* cách hiện thị chữ trên trang web tốt nhất trên web */
+}
+/* ----------------------------------------------*/
+/* -----------------REUSABLE COMPONENT-----------*/
+/* ----------------------------------------------*/
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #e67e22;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 50px;
+    width: 190px;
+    display: inline-block;
+    /* nó sẽ lấy giao thuộc tính của hai thằng này - vì thằng Block mới chỉnh dc
+    height và width được */
+    text-align: center;
+    /* căn chữ ở giữa */
+    transition: all 3s;
+    /* thuộc tính all nếu mình ko cần các hiệu ứng chạy lệnh nhau
+    thì chọn all */
+}
+.btn:hover,
+.btn:active{
+    background-color: #d35400;
+    /* nó để đổi màu khi mình trỏ chuột vào */
+}
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+    /* mục đích của nó để ko truyền định dạng xuống phần row từ 
+    định dạng của main-nav */
+}
+.row{
+    width: 1140px;
+    margin: 0 auto;
+}
+h2, h2{
+    text-transform: uppercase;
+    /* biến đổi kiểu chữ toàn bộ chữ in hoa */
+    letter-spacing: 1px;
+    /* khoảng cách giữa các chữ cái với nhau */
+}
+h1{
+ 
+    font-size: 300%;
+    font-weight: 400;
+    word-spacing:5px;
+    /* khoảng cách giữa các từ với nhau */
+    color: white;
+    line-height: 135%;
+    margin-bottom: 50px;
+}
+h2{
+    color: #e67e22;
+    font-size: 180%;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2::after{
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: rgba(230,126,34,0.5);
+    margin: 0 auto;
+    margin-top: 5px;
+    /* với hàm pseudo này, ý là after sau cái h2 thì mình sẽ add thêm 1 cái khối với 
+    kích thước màu sắc như khai báo, màu + độ mờ */
+}
+.p-long{
+    text-align: center;
+    color: rgb(38, 80,119);
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    /* đơn giản vì phần nội dung chiếm 70% thì còn lại chia đôi là 15% */
+    line-height: 140%;
+}
+/* ----------------------------------------------*/
+/* -----------------HEADER-----------------------*/
+/* ----------------------------------------------*/
+section{
+    padding: 50px;
+}
+header{
+    background-image:linear-gradient(45deg,rgba(2,33,64,0.8) 55%,rgba(45,95,93,0.85)), url(../img/DUC_5821.JPG);
+    /* phối giữa hai màu với nhau theo chiều mình mong muốn từ right to top..... hoặc dùng 135deg dùng độ hoặc dùng phần trăm */
+    /* để hiện thị đờ mờ dử dụng rgba */
+    /* có 2 dấu chấm vì sau, ý là với thẻ style.css 
+    thì nó phải ra khỏi folder của nó sau đó mới lại 
+    quay lại thẻ img */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /* view heigth - lấy phần trăm của view nhìn */
+    background-attachment: fixed;
+    /* mục đích của nó để fix view nhìn của ảnh background dù 
+    di chuyển nó vẫn đi theo */
+}
+.logo{
+    width: 350px;
+    float: left;
+    margin-left: 70px;
+    margin-top: -50px;
+}
+.main-nav{
+    float: right;
+    list-style: none;
+    /* mục đích của nó để bỏ qua định dạng 
+    hiển thị của list dấu gạch - or . */
+    margin-right: 50px;
+    margin-top: 55px;
+}
+.main-nav li a{
+    text-decoration: none;
+    color:white;
+    font-size: 110%;
+    font-weight: 700;
+    transition: border-bottom 0.5s;
+    padding: 3px 0;
+    /* mục đích của nó để hiện cái delay của border-bottom: */
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid white;
+}
+.main-nav li{
+    display: inline-block;
+    /* mục đích để cho chúng hiện thị cùng 1 dòng, 
+    không theo định dạng block  */
+    margin-right: 30px;
+}
+.heading-main-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%,-55%);
+    /* dịch chuyển đúng bằng % kích thước của box */
+    width: 1140px;
+}
+
+/* ----------------------------------------------*/
+/* -----------------ABOUT SECTION----------------*/
+/* ----------------------------------------------*/
+.about-picture{
+    position: relative;
+    margin-top: 50px;
+}
+.about-picture img{
+    width: 90%;
+    border-radius: 20px;
+    border: 4px solid #c2e1fd;
+    box-shadow: 0px 5px 15px 5px #265077;
+    /* gồm 5 thuộc tính, x - y - độ mờ - độ phóng - rộng màu */
+    /* độ dịch chuyển x, y so với đối tượng dùng shadow */
+    /* filter: brightness(55%) blur(2px); */
+    transition: all 0.5s;
+}
+.picture-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #c2e1fd;
+    transform: translate(-65%,100%);
+    opacity: 0;
+    transition: all 0.5s;
+}
+.about-picture:hover .picture-title,
+.about-picture:active .picture-title{
+    transform: translate(-65%, -50%);
+    /* tức là khi hover cái thằng about picture thì mình sẽ 
+    chỉnh thuộc tính của picture title */
+    opacity: 1;
+    /* như vậy css rất thông minh nó sẽ hiểu thằng 
+    lệnh cuối cùng để áp dụng cho thằng picture-title */
+}
+.about-picture:hover img,
+.about-picture:active img{
+    filter: brightness(55%) blur(2px);
+}
