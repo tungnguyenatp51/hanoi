@@ -138,7 +138,8 @@ header{
     width: 350px;
     float: left;
     margin-left: 70px;
-    margin-top: -50px;
+    margin-top: 180px;
+    transform: scale(2);
 }
 .main-nav{
     float: right;
