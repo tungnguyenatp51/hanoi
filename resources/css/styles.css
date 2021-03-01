@@ -203,6 +203,22 @@ header{
 .sticky .main-nav{
     margin-top: 30px;
 }
+/* ----------------------------------------------*/
+/* ----------------MOBLIE ICON SECTION-----------*/
+/* ----------------------------------------------*/
+.mobile-nav-icon{
+    font-size: 200%;
+    color:#6b95bd;
+    position: absolute;
+    top:55px;
+    right: 100px;
+}
+.sticky .mobile-nav-icon{
+    top:30px;
+}
+
+
+
 
 /* ----------------------------------------------*/
 /* -----------------ABOUT SECTION----------------*/
