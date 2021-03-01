@@ -181,6 +181,25 @@ header{
     /* dịch chuyển đúng bằng % kích thước của box */
     width: 1140px;
 }
+/* ----------------------------------------------*/
+/* -----------------STICKY SECTION----------------*/
+/* ----------------------------------------------*/
+.sticky{
+    background-color: rgba(2,33,64,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    height: 80px;
+}
+.sticky .logo{
+    width:250px;
+    margin-top: -40px;
+}
+.sticky .main-nav{
+    margin-top: 30px;
+}
 
 /* ----------------------------------------------*/
 /* -----------------ABOUT SECTION----------------*/
