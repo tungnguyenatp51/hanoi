@@ -159,7 +159,7 @@
    .logo{
        width: 220px;
        margin-top: 5%;
-       margin-left: 20%;
+       margin-left: 1%;
    }
    .information li{
     font-size: 14px;
@@ -192,7 +192,7 @@
     }
     .sticky .logo{
         width: 200px;
-        margin-top: -25px;
+        margin-top: 5px;
     }
 
 }
