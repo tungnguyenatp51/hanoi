@@ -125,6 +125,9 @@
       font-size: 50px;
       margin-bottom: 20px;
   }
+  .sponsors-section img{
+    width: 100px;
+}
 }
  
 /* Small phones from 0 to 480px; */
@@ -170,7 +173,7 @@
        margin-bottom: 20px;
    }
    .sponsors-section img{
-       width: 80px;
+       width: 90px;
    }
    label{
        margin-bottom: 20px;

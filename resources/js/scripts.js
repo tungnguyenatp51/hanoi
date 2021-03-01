@@ -1,15 +1,24 @@
 $(document).ready(
     function () {
-        $('about-section').waypoint(
+
+        // sticky nav
+        $('.about-section').waypoint(
             function (direction) {
                 if (direction == "down") {
-                    $('nav').addclass('sticky');
+                    $('nav').addClass('sticky');
                 } else {
-                    $('nav').removeclass('sticky');
+                    $('nav').removeClass('sticky');
                 }
             }, {
-            offset: '100px'
-                }
+            offset: '600px'
+        }
         )
-     }           
+        // scroll
+        $('a').click(function(event){
+            $('html, body').animate({
+                scrollTop: $( $.attr(this, 'href') ).offset().top
+            }, 700);
+            event.preventDefault();
+        });
+    }
 )

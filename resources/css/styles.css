@@ -17,6 +17,9 @@ html{
     text-rendering: optimizeLegibility;
     /* cách hiện thị chữ trên trang web tốt nhất trên web */
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     overflow-x: hidden;
     /* mục đích để ẩn thanh kéo ngang ở dưới */
